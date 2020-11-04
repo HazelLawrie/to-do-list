@@ -83,3 +83,21 @@ function filterToDo(e) {
         }
     });
 }
+
+function guessGame() {
+    let randomNr = Math.floor(Math.random() * 11);
+    let guess;
+    do {
+        guess = prompt(`Guess a number between 0 and 10`);
+        console.log(guess, randomNr);
+        if(randomNr > guess){
+            console.log(`you guessed too low`);
+        } else if (randomNr < guess){
+            console.log(`guess was too high`);
+        }
+    } while (guess != randomNr);
+    console.log(`you won`);
+
+}
+
+guessGame();
